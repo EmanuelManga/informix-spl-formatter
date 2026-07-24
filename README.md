@@ -68,7 +68,7 @@ En tu proyecto de SQL, creá o editá `.vscode/settings.json`:
         "editor.defaultFormatter": "emanuelmanga.informix-spl-formatter",
         "editor.formatOnSave": true
     },
-    "sql-formatter.uppercase": true,
+    "informixSpl.uppercase": true,
     "informixSpl.indentSize": 2,
     "informixSpl.useTabs": false,
     "informixSpl.blankAfterQuery": true,
@@ -83,7 +83,7 @@ En tu proyecto de SQL, creá o editá `.vscode/settings.json`:
 
 | Setting                              | Default | Descripción                                                    |
 | ------------------------------------ | ------- | -------------------------------------------------------------- |
-| `sql-formatter.uppercase`            | `true`  | Keywords en mayúsculas                                         |
+| `informixSpl.uppercase`              | `true`  | Keywords en mayúsculas                                         |
 | `informixSpl.indentSize`             | `4`     | Espacios por nivel                                             |
 | `informixSpl.useTabs`                | `false` | Usar tabs en lugar de espacios                                 |
 | `informixSpl.blankAfterQuery`        | `true`  | Línea en blanco después de `SELECT`/`INSERT`/`UPDATE`/`DELETE` |

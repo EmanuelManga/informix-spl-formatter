@@ -1,0 +1,13 @@
+# Samples / local SQL (no versionar dumps de prueba)
+*.sql
+
+# Dependencias
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+*~
+
+.vscode/
+scripts/

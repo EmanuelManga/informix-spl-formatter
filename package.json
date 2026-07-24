@@ -1,0 +1,67 @@
+{
+    "name": "informix-spl-formatter",
+    "displayName": "Informix SPL Formatter",
+    "description": "Formatea procedimientos Informix SPL: DEFINE/LET, IF/FOR/FOREACH anidados",
+    "version": "0.1.0",
+    "publisher": "emanuelmanga",
+    "engines": {
+        "vscode": "^1.74.0"
+    },
+    "categories": [
+        "Formatters"
+    ],
+    "activationEvents": [
+        "onLanguage:sql"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "configuration": {
+            "title": "Informix SPL Formatter",
+            "properties": {
+                "sql-formatter.uppercase": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Convierte keywords Informix/SQL a mayusculas"
+                },
+                "informixSpl.indentSize": {
+                    "type": "number",
+                    "default": 4,
+                    "description": "Espacios por nivel de anidamiento (IF/FOR/FOREACH)"
+                },
+                "informixSpl.useTabs": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Usar tabs en lugar de espacios para indentar"
+                },
+                "informixSpl.blankAfterQuery": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Linea en blanco despues de SELECT/INSERT/UPDATE/DELETE"
+                },
+                "informixSpl.blankAfterIf": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Linea en blanco despues de IF...THEN, ELSE y END IF"
+                },
+                "informixSpl.blankAfterReturning": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Linea en blanco despues de la ultima variable del RETURNING"
+                },
+                "informixSpl.blankBeforeElseEndIf": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Linea en blanco antes de ELSE y END IF"
+                },
+                "informixSpl.keepEndClosersTogether": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Sin lineas en blanco entre cierres consecutivos (END IF / END FOR / END FOREACH / END WHILE)"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "format-file": "node ./scripts/format-cli.js"
+    }
+}

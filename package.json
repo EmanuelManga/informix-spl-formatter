@@ -1,6 +1,7 @@
 {
     "name": "informix-spl-formatter",
     "displayName": "Informix SPL Formatter",
+    "icon": "informix-spl-formatter.png",
     "description": "Formatea procedimientos Informix SPL: DEFINE/LET, IF/FOR/FOREACH anidados",
     "version": "0.1.0",
     "publisher": "emanuelmanga",

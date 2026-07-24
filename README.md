@@ -10,15 +10,15 @@ Los formatters genéricos de SQL (p. ej. `adpyke.vscode-sql-formatter`) no entie
 
 ## Qué formatea
 
-| Regla | Descripción |
-| --- | --- |
-| `DEFINE` / `LET` | Sin línea en blanco entre consecutivos; sí cuando cambia el tipo de sentencia |
-| `IF` / `FOR` / `FOREACH` / `WHILE` | Indentación anidada |
-| Queries | `SELECT` / `INSERT` / `UPDATE` / `DELETE` con cláusulas (`INTO`, `FROM`, `WHERE`, `AND`, …) |
-| Subqueries | Contenido dentro de `(` un nivel más adentro |
-| Keywords | Opcional: pasar a mayúsculas |
-| Espaciado | Opciones para blancos después de queries, `IF`/`ELSE`/`END IF`, `RETURNING`, etc. |
-| Cierres apilados | `END IF` / `END FOR` / `END FOREACH` consecutivos quedan juntos |
+| Regla                              | Descripción                                                                                 |
+| ---------------------------------- | ------------------------------------------------------------------------------------------- |
+| `DEFINE` / `LET`                   | Sin línea en blanco entre consecutivos; sí cuando cambia el tipo de sentencia               |
+| `IF` / `FOR` / `FOREACH` / `WHILE` | Indentación anidada                                                                         |
+| Queries                            | `SELECT` / `INSERT` / `UPDATE` / `DELETE` con cláusulas (`INTO`, `FROM`, `WHERE`, `AND`, …) |
+| Subqueries                         | Contenido dentro de `(` un nivel más adentro                                                |
+| Keywords                           | Opcional: pasar a mayúsculas                                                                |
+| Espaciado                          | Opciones para blancos después de queries, `IF`/`ELSE`/`END IF`, `RETURNING`, etc.           |
+| Cierres apilados                   | `END IF` / `END FOR` / `END FOREACH` consecutivos quedan juntos                             |
 
 ---
 
@@ -64,38 +64,33 @@ En tu proyecto de SQL, creá o editá `.vscode/settings.json`:
 
 ```json
 {
-  "[sql]": {
-    "editor.defaultFormatter": "emanuelmanga.informix-spl-formatter",
-    "editor.formatOnSave": true
-  },
-  "sql-formatter.uppercase": true,
-  "informixSpl.indentSize": 2,
-  "informixSpl.useTabs": false,
-  "informixSpl.blankAfterQuery": true,
-  "informixSpl.blankAfterIf": true,
-  "informixSpl.blankAfterReturning": true,
-  "informixSpl.blankBeforeElseEndIf": true,
-  "informixSpl.keepEndClosersTogether": true
+    "[sql]": {
+        "editor.defaultFormatter": "emanuelmanga.informix-spl-formatter",
+        "editor.formatOnSave": true
+    },
+    "sql-formatter.uppercase": true,
+    "informixSpl.indentSize": 2,
+    "informixSpl.useTabs": false,
+    "informixSpl.blankAfterQuery": true,
+    "informixSpl.blankAfterIf": true,
+    "informixSpl.blankAfterReturning": true,
+    "informixSpl.blankBeforeElseEndIf": true,
+    "informixSpl.keepEndClosersTogether": true
 }
 ```
 
 ### Opciones
 
-| Setting | Default | Descripción |
-| --- | --- | --- |
-| `sql-formatter.uppercase` | `true` | Keywords en mayúsculas |
-| `informixSpl.indentSize` | `4` | Espacios por nivel |
-| `informixSpl.useTabs` | `false` | Usar tabs en lugar de espacios |
-| `informixSpl.blankAfterQuery` | `true` | Línea en blanco después de `SELECT`/`INSERT`/`UPDATE`/`DELETE` |
-| `informixSpl.blankAfterIf` | `true` | Línea en blanco después de `IF…THEN`, `ELSE`, `END IF` |
-| `informixSpl.blankAfterReturning` | `true` | Línea en blanco después del último ítem de `RETURNING` |
-| `informixSpl.blankBeforeElseEndIf` | `true` | Línea en blanco antes de `ELSE` / `END IF` |
-| `informixSpl.keepEndClosersTogether` | `true` | Sin blancos entre cierres consecutivos (`END IF`/`END FOR`/…) |
-
-### Uso
-
-- **Format Document:** `Shift+Alt+F` (Linux/Windows) o `Shift+Option+F` (macOS)
-- O con **format on save** si está activado para `[sql]`
+| Setting                              | Default | Descripción                                                    |
+| ------------------------------------ | ------- | -------------------------------------------------------------- |
+| `sql-formatter.uppercase`            | `true`  | Keywords en mayúsculas                                         |
+| `informixSpl.indentSize`             | `4`     | Espacios por nivel                                             |
+| `informixSpl.useTabs`                | `false` | Usar tabs en lugar de espacios                                 |
+| `informixSpl.blankAfterQuery`        | `true`  | Línea en blanco después de `SELECT`/`INSERT`/`UPDATE`/`DELETE` |
+| `informixSpl.blankAfterIf`           | `true`  | Línea en blanco después de `IF…THEN`, `ELSE`, `END IF`         |
+| `informixSpl.blankAfterReturning`    | `true`  | Línea en blanco después del último ítem de `RETURNING`         |
+| `informixSpl.blankBeforeElseEndIf`   | `true`  | Línea en blanco antes de `ELSE` / `END IF`                     |
+| `informixSpl.keepEndClosersTogether` | `true`  | Sin blancos entre cierres consecutivos (`END IF`/`END FOR`/…)  |
 
 ---
 
